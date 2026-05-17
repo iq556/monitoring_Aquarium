@@ -1,0 +1,17 @@
+{
+  "name": "monitoring-Aquarium-netlify-function",
+  "version": "1.0.0",
+  "description": "Website monitoring Aquarium dengan backend Netlify Function",
+  "main": "netlify/functions/api.js",
+  "scripts": {
+    "start": "npx netlify dev",
+    "build": "echo Build selesai"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "serverless-http": "^3.2.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.38.1"
+  }
+}

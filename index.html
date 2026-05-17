@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Sistem Monitoring Aquarium Ikan Tropis</title>
+
+  <meta
+    name="description"
+    content="Website edukasi interaktif untuk monitoring suhu, kelembapan, tinggi air, kekeruhan, serta simulasi IoT aquarium ikan tropis."
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="mobile-header">
+    <button
+      class="menu-button"
+      id="openSidebarBtn"
+      type="button"
+      aria-label="Buka menu navigasi"
+    >
+      <i class="bi bi-list"></i>
+    </button>
+
+    <strong>Smart Aquarium Monitoring</strong>
+  </header>
+
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+  <div class="app-layout">
+    <aside class="sidebar" id="sidebarMenu">
+      <div class="brand">
+        <div class="brand-icon">
+          <i class="bi bi-cpu-fill"></i>
+        </div>
+
+        <div>
+          <h1>Smart Aquarium "Aldy Iqbal"</h1>
+          <p>Monitoring Suhu, Air, Sensor &amp; IoT</p>
+        </div>
+      </div>
+
+      <nav class="side-nav" aria-label="Navigasi utama">
+        <a class="active" href="#beranda">
+          <i class="bi bi-house-door-fill"></i>
+          <span>Beranda</span>
+        </a>
+
+        <a href="#keunggulan">
+          <i class="bi bi-stars"></i>
+          <span>Keunggulan</span>
+        </a>
+
+        <a href="#wokwi">
+          <i class="bi bi-cpu-fill"></i>
+          <span>Simulasi Wokwi</span>
+        </a>
+
+        <a href="#materi-video">
+          <i class="bi bi-play-btn-fill"></i>
+          <span>Materi Video</span>
+        </a>
+
+        <a href="#konversi">
+          <i class="bi bi-arrow-repeat"></i>
+          <span>Konversi Suhu</span>
+        </a>
+
+        <a href="#kalor">
+          <i class="bi bi-calculator-fill"></i>
+          <span>Kalkulator Kalor</span>
+        </a>
+
+        <a href="#black">
+          <i class="bi bi-droplet-half"></i>
+          <span>Asas Black</span>
+        </a>
+
+        <a href="#quiz">
+          <i class="bi bi-controller"></i>
+          <span>Kuis</span>
+        </a>
+
+        <a href="#pesan">
+          <i class="bi bi-envelope-paper-fill"></i>
+          <span>Masukan</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-card">
+        <strong>Media Pembelajaran</strong>
+        <p>
+          Sistem ini menggabungkan materi suhu dan kalor dengan simulasi
+          monitoring aquarium berbasis sensor.
+        </p>
+      </div>
+    </aside>
+
+    <main class="main-content">
+
+      <!--BERANDA-->
+
+      <section id="beranda" class="section-card hero-section">
+        <div>
+          <span class="section-label">Edukasi SAINS UIN SYEKH WASIL KEDIRI</span>
+
+          <h2>
+            Sistem Monitoring Aquarium Ikan Tropis Berbasis IoT yang Interaktif
+            dan Edukatif
+          </h2>
+
+          <p>
+            Website ini dirancang untuk membantu pengguna memahami pemantauan
+            suhu air, kelembapan udara, tinggi air, kekeruhan, serta kerja
+            aktuator seperti relay, LED, buzzer, dan servo melalui tampilan
+            visual yang mudah dipahami.
+          </p>
+
+          <div class="button-group">
+            <a href="#wokwi" class="btn btn-primary rounded-pill px-4">
+              <i class="bi bi-cpu-fill me-1"></i>
+              Mulai Simulasi
+            </a>
+
+            <a href="#materi-video" class="btn btn-outline-primary rounded-pill px-4">
+              <i class="bi bi-play-circle-fill me-1"></i>
+              Pelajari Materi
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-grid">
+          <div class="mini-card">
+            <i class="bi bi-thermometer-half"></i>
+            <h3>Suhu Air</h3>
+            <p>Pemantauan suhu ideal ikan tropis pada rentang 24-28°C.</p>
+          </div>
+
+          <div class="mini-card">
+            <i class="bi bi-water"></i>
+            <h3>Kondisi Air</h3>
+            <p>Pantau tinggi air dan kekeruhan agar kondisi aquarium tetap aman.</p>
+          </div>
+
+          <div class="mini-card">
+            <i class="bi bi-cpu-fill"></i>
+            <h3>Simulasi IoT</h3>
+            <p>Memahami kerja sensor dan aktuator melalui simulasi Wokwi.</p>
+          </div>
+
+          <div class="mini-card">
+            <i class="bi bi-mortarboard-fill"></i>
+            <h3>Edukasi</h3>
+            <p>Dilengkapi video, kalkulator, asas Black, dan kuis interaktif.</p>
+          </div>
+        </div>
+      </section>
+
+      <!--KEUNGGULAN + AI-->
+
+      <section id="keunggulan" class="section-card">
+        <div class="section-head">
+          <span class="section-label">Keunggulan Sistem</span>
+
+          <h2>Mengapa Website Ini Menarik?</h2>
+
+          <p>
+            Website ini tidak hanya menampilkan materi pembelajaran, tetapi juga
+            menghadirkan simulasi monitoring berbasis sensor sehingga pengguna
+            dapat memahami hubungan antara konsep fisika, teknologi IoT, dan
+            penerapannya pada aquarium ikan tropis.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-3">
+            <div class="mini-card h-100">
+              <i class="bi bi-cpu-fill"></i>
+              <h3>Berbasis IoT</h3>
+              <p>
+                Mengenalkan konsep sensor, ESP32, relay, buzzer, LED, dan servo
+                dalam satu sistem monitoring.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-3">
+            <div class="mini-card h-100">
+              <i class="bi bi-graph-up-arrow"></i>
+              <h3>Data Terukur</h3>
+              <p>
+                Pengguna dapat melihat status suhu, kelembapan, tinggi air, dan
+                kekeruhan secara terstruktur.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-3">
+            <div class="mini-card h-100">
+              <i class="bi bi-water"></i>
+              <h3>Tema Aquarium</h3>
+              <p>
+                Parameter sistem disesuaikan dengan kebutuhan pemantauan kondisi
+                aquarium ikan tropis.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-3">
+            <div class="mini-card h-100">
+              <i class="bi bi-controller"></i>
+              <h3>Interaktif</h3>
+              <p>
+                Tersedia kalkulator, simulasi, video pembelajaran, dan kuis untuk
+                meningkatkan pemahaman pengguna.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="ai-learning-box mt-5">
+          <div class="section-head">
+            <span class="section-label">AI Tanya Jawab</span>
+
+            <h2>Asisten Pembelajaran Monitoring Aquarium</h2>
+
+            <p>
+              Fitur ini membantu pengguna bertanya seputar suhu, kalor, sensor,
+              kelembapan, tinggi air, kekeruhan, serta cara kerja sistem
+              monitoring aquarium ikan tropis.
+            </p>
+          </div>
+
+          <div class="ai-chat-card">
+            <div class="ai-chat-header">
+              <div class="ai-avatar">
+                <i class="bi bi-robot"></i>
+              </div>
+
+              <div>
+                <h3>AI Edukasi</h3>
+                <p>Tanyakan materi tentang suhu, kalor, sensor, atau simulasi aquarium.</p>
+              </div>
+            </div>
+
+            <div class="ai-suggestion-list">
+              <button type="button" onclick="isiPertanyaanAI('Apa fungsi sensor suhu pada aquarium?')">
+                Apa fungsi sensor suhu?
+              </button>
+
+              <button type="button" onclick="isiPertanyaanAI('Mengapa suhu air ikan tropis harus 24 sampai 28 derajat Celsius?')">
+                Mengapa suhu ideal 24-28°C?
+              </button>
+
+              <button type="button" onclick="isiPertanyaanAI('Apa hubungan kekeruhan air dengan kualitas aquarium?')">
+                Apa pengaruh kekeruhan air?
+              </button>
+
+              <button type="button" onclick="isiPertanyaanAI('Bagaimana cara kerja relay pada sistem monitoring aquarium?')">
+                Bagaimana kerja relay?
+              </button>
+
+              <button type="button" onclick="isiPertanyaanAI('Apa saja komponen pada gambar rangkaian ini?')">
+                Komponen Rangkaian
+              </button>
+
+              <button type="button" onclick="isiPertanyaanAI('Apa fungsi ESP32 pada sistem monitoring aquarium?')">
+                Fungsi ESP32
+              </button>
+
+              <button type="button" onclick="isiPertanyaanAI('Bagaimana cara kerja sensor HC-SR04 untuk tinggi air?')">
+                Sensor HC-SR04
+              </button>
+
+              <button type="button" onclick="isiPertanyaanAI('Apa fungsi LCD I2C pada rangkaian?')">
+                LCD I2C
+              </button>
+
+              <button type="button" onclick="isiPertanyaanAI('Apa fungsi relay pada sistem monitoring aquarium?')">
+                Relay/Pompa
+              </button>
+
+              <button type="button" onclick="isiPertanyaanAI('Apa fungsi servo pada sistem pemberian pakan?')">
+                Servo Pakan
+              </button>
+            </div>
+
+            <div class="ai-chat-output" id="aiChatOutput">
+              <div class="ai-message bot">
+                Halo, saya asisten Iqbal dalam pembelajaran. Silakan bertanya
+                tentang monitoring aquarium, suhu, kalor, sensor, relay, LED,
+                buzzer, servo, atau simulasi Wokwi.
+              </div>
+            </div>
+
+            <div class="ai-chat-input">
+              <input
+                type="text"
+                id="aiQuestionInput"
+                class="form-control"
+                placeholder="Contoh: Apa fungsi buzzer pada sistem monitoring?"
+              />
+
+              <button
+                type="button"
+                class="btn btn-primary rounded-pill"
+                onclick="jawabPertanyaanAI()"
+              >
+                <i class="bi bi-send-fill me-1"></i>
+                Tanya
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--simulasi wokwi-->
+
+      <section id="wokwi" class="section-card">
+        <div class="section-head">
+          <span class="section-label">Simulasi Wokwi</span>
+
+          <h2>Simulasi Monitoring Aquarium Ikan</h2>
+
+          <p>
+            Simulasi ini meniru logika alat ESP32 untuk memantau suhu air,
+            kelembapan lingkungan, tinggi air, dan kekeruhan air. Sistem juga
+            menampilkan kondisi relay/pompa, LED, buzzer, servo pakan, serta
+            mode manual atau otomatis.
+          </p>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-md-6 col-xl-4">
+            <label class="form-label" for="wokwiSuhuInput">
+              Suhu Air / DHT22 (°C)
+            </label>
+
+            <input
+              class="form-control"
+              id="wokwiSuhuInput"
+              type="number"
+              placeholder="Ideal: 24 - 28"
+            />
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <label class="form-label" for="wokwiKelembabanInput">
+              Kelembapan Udara (%)
+            </label>
+
+            <input
+              class="form-control"
+              id="wokwiKelembabanInput"
+              type="number"
+              placeholder="Ideal: 45 - 75"
+            />
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <label class="form-label" for="wokwiJarakInput">
+              Jarak Sensor ke Permukaan Air (cm)
+            </label>
+
+            <input
+              class="form-control"
+              id="wokwiJarakInput"
+              type="number"
+              placeholder="Tinggi wadah: 20 cm"
+            />
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <label class="form-label" for="wokwiTinggiWadahInput">
+              Tinggi Wadah dari Sensor ke Dasar (cm)
+            </label>
+
+            <input
+              class="form-control"
+              id="wokwiTinggiWadahInput"
+              type="number"
+              value="20"
+              placeholder="20"
+            />
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <label class="form-label" for="wokwiKeruhInput">
+              Nilai Kekeruhan / Potentiometer
+            </label>
+
+            <input
+              class="form-control"
+              id="wokwiKeruhInput"
+              type="number"
+              placeholder="Keruh jika ≥ 2500"
+            />
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <label class="form-label" for="wokwiModeInput">
+              Mode Sistem
+            </label>
+
+            <select class="form-select" id="wokwiModeInput">
+              <option value="otomatis">Otomatis</option>
+              <option value="manual">Manual</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="wokwi-actions mt-4">
+          <button
+            class="btn btn-primary rounded-pill"
+            id="hitungWokwiBtn"
+            type="button"
+          >
+            Hitung Simulasi
+          </button>
+
+          <button
+            class="btn btn-outline-primary rounded-pill"
+            id="simulasiOtomatisBtn"
+            type="button"
+          >
+            Simulasi Otomatis
+          </button>
+
+          <button
+            class="btn btn-outline-secondary rounded-pill"
+            id="stopSimulasiBtn"
+            type="button"
+          >
+            Stop
+          </button>
+        </div>
+
+        <div class="wokwi-dashboard mt-4">
+          <div class="wokwi-data-card">
+            <div class="wokwi-card-icon suhu-icon">
+              <i class="bi bi-thermometer-half"></i>
+            </div>
+
+            <span>Suhu</span>
+            <strong id="wokwiSuhuOutput">-</strong>
+            <small>Sensor DHT22</small>
+          </div>
+
+          <div class="wokwi-data-card">
+            <div class="wokwi-card-icon suhu-icon">
+              <i class="bi bi-activity"></i>
+            </div>
+
+            <span>Status Suhu</span>
+            <strong id="wokwiStatusSuhuOutput">-</strong>
+            <small>DINGIN / IDEAL / PANAS</small>
+          </div>
+
+          <div class="wokwi-data-card">
+            <div class="wokwi-card-icon kelembaban-icon">
+              <i class="bi bi-droplet-fill"></i>
+            </div>
+
+            <span>Kelembapan</span>
+            <strong id="wokwiKelembabanOutput">-</strong>
+            <small>Sensor DHT22</small>
+          </div>
+
+          <div class="wokwi-data-card">
+            <div class="wokwi-card-icon kelembaban-icon">
+              <i class="bi bi-cloud-drizzle-fill"></i>
+            </div>
+
+            <span>Status Lembap</span>
+            <strong id="wokwiStatusKelembabanOutput">-</strong>
+            <small>KERING / STABIL / LEMBAP</small>
+          </div>
+
+          <div class="wokwi-data-card">
+            <div class="wokwi-card-icon jarak-icon">
+              <i class="bi bi-rulers"></i>
+            </div>
+
+            <span>Jarak Air</span>
+            <strong id="wokwiJarakOutput">-</strong>
+            <small>Sensor HC-SR04</small>
+          </div>
+
+          <div class="wokwi-data-card">
+            <div class="wokwi-card-icon jarak-icon">
+              <i class="bi bi-water"></i>
+            </div>
+
+            <span>Tinggi Air</span>
+            <strong id="wokwiTinggiAirOutput">-</strong>
+            <small>H = tinggi wadah - jarak</small>
+          </div>
+
+          <div class="wokwi-data-card">
+            <div class="wokwi-card-icon jarak-icon">
+              <i class="bi bi-exclamation-circle-fill"></i>
+            </div>
+
+            <span>Status Air</span>
+            <strong id="wokwiStatusAirOutput">-</strong>
+            <small>RENDAH / IDEAL / TINGGI</small>
+          </div>
+
+          <div class="wokwi-data-card">
+            <div class="wokwi-card-icon kalor-icon">
+              <i class="bi bi-moisture"></i>
+            </div>
+
+            <span>Kekeruhan</span>
+            <strong id="wokwiKeruhOutput">-</strong>
+            <small>Potentiometer pin 35</small>
+          </div>
+
+          <div class="wokwi-data-card">
+            <div class="wokwi-card-icon kalor-icon">
+              <i class="bi bi-droplet-half"></i>
+            </div>
+
+            <span>Status Keruh</span>
+            <strong id="wokwiStatusKeruhOutput">-</strong>
+            <small>JERNIH / KERUH</small>
+          </div>
+
+          <div class="wokwi-data-card">
+            <div class="wokwi-card-icon relay-icon">
+              <i class="bi bi-toggle-on"></i>
+            </div>
+
+            <span>Relay / Pompa</span>
+            <strong id="wokwiRelayOutput">-</strong>
+            <small>ON jika air rendah</small>
+          </div>
+
+          <div class="wokwi-data-card">
+            <div class="wokwi-card-icon led-icon">
+              <i class="bi bi-lightbulb-fill"></i>
+            </div>
+
+            <span>LED</span>
+            <strong id="wokwiLedOutput">-</strong>
+            <small>Indikator bahaya</small>
+          </div>
+
+          <div class="wokwi-data-card">
+            <div class="wokwi-card-icon buzzer-icon">
+              <i class="bi bi-volume-up-fill"></i>
+            </div>
+
+            <span>Buzzer</span>
+            <strong id="wokwiBuzzerOutput">-</strong>
+            <small>Alarm bahaya</small>
+          </div>
+
+          <div class="wokwi-data-card">
+            <div class="wokwi-card-icon servo-icon">
+              <i class="bi bi-gear-fill"></i>
+            </div>
+
+            <span>Servo Pakan</span>
+            <strong id="wokwiServoOutput">-</strong>
+            <small>0° / 90°</small>
+          </div>
+
+          <div class="wokwi-data-card">
+            <div class="wokwi-card-icon relay-icon">
+              <i class="bi bi-sliders"></i>
+            </div>
+
+            <span>Mode</span>
+            <strong id="wokwiModeOutput">-</strong>
+            <small>Manual / Otomatis</small>
+          </div>
+        </div>
+
+        <div class="wokwi-status-box mt-4">
+          <h3>Status Simulasi</h3>
+
+          <p id="wokwiStatusOutput">
+            Masukkan data lalu klik Hitung Simulasi.
+          </p>
+
+          <p id="wokwiActionOutput" class="mb-0">-</p>
+        </div>
+
+        <div class="info-box mt-4">
+          <strong>Logika Sistem:</strong>
+
+          <ul class="mb-0">
+            <li>Suhu ideal air tropis: 24°C - 28°C.</li>
+            <li>Kelembapan stabil: 45% - 75%.</li>
+            <li>Tinggi air ideal: 2 cm - 10 cm.</li>
+            <li>Air keruh jika nilai potentiometer ≥ 2500.</li>
+            <li>Mode otomatis: relay/pompa hidup jika air rendah.</li>
+            <li>LED dan buzzer aktif jika suhu, kelembapan, air, atau kekeruhan tidak normal.</li>
+            <li>Servo memberi pakan otomatis sesuai interval pada kode ESP32.</li>
+          </ul>
+        </div>
+
+        <div class="wokwi-frame mt-4">
+          <iframe
+            src="https://wokwi.com/projects/463862482393938945"
+            title="Simulasi Wokwi Monitoring Aquarium Ikan Tropis"
+            loading="lazy"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+      </section>
+
+      <!-- MATERI VIDEO -->
+      <div class="video-card">
+      <div class="video-icon">
+      <i class="bi bi-youtube"></i>
+      </div>
+
+      <h3>Video Pembelajaran</h3>
+
+      <p>
+        Tonton video berikut untuk memahami materi secara lebih jelas melalui
+      penjelasan visual.
+      </p>
+
+      <div class="video-wrapper">
+      <iframe
+        src="https://www.youtube.com/embed/-R4oh0cej4k"
+        title="Video YouTube"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+      </div>
+      </div>
+      <!-- AKHIR MATERI VIDEO -->
+
+      <!--KONVERSI SUHU -->
+
+      <section id="konversi" class="section-card">
+        <div class="section-head">
+          <span class="section-label">Fitur Konversi Suhu</span>
+
+          <h2>Konversi Suhu Real-time</h2>
+
+          <p>
+            Masukkan nilai suhu dan pilih satuan asal untuk mengetahui hasil
+            konversi ke Celsius, Fahrenheit, Reamur, dan Kelvin.
+          </p>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label" for="temperatureInput">
+              Nilai Suhu
+            </label>
+
+            <input
+              class="form-control"
+              id="temperatureInput"
+              type="number"
+              placeholder="Contoh: 100"
+            />
+          </div>
+
+          <div class="col-md-6">
+            <label class="form-label" for="temperatureUnit">
+              Satuan Asal
+            </label>
+
+            <select class="form-select" id="temperatureUnit">
+              <option value="celsius">Celsius</option>
+              <option value="fahrenheit">Fahrenheit</option>
+              <option value="reamur">Reamur</option>
+              <option value="kelvin">Kelvin</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="formula-list">
+          <span>F = (9/5 × C) + 32</span>
+          <span>R = 4/5 × C</span>
+          <span>K = C + 273.15</span>
+        </div>
+
+        <div class="mt-3">
+          <h5>Hasil Konversi:</h5>
+          <p id="celsiusResult">Celsius: -</p>
+          <p id="fahrenheitResult">Fahrenheit: -</p>
+          <p id="reamurResult">Reamur: -</p>
+          <p id="kelvinResult">Kelvin: -</p>
+        </div>
+      </section>
+
+     <!--KALKULATOR KALOR -->
+      <section id="kalor" class="section-card">
+        <div class="section-head">
+          <span class="section-label">Fitur Kalkulator</span>
+
+          <h2>Kalkulator Kalor</h2>
+
+          <p>
+            Gunakan rumus Q = m.c.ΔT untuk menghitung energi kalor berdasarkan
+            massa, kalor jenis, dan perubahan suhu.
+          </p>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-md-6 col-xl-3">
+            <label class="form-label" for="massInput">
+              Massa (kg)
+            </label>
+
+            <input
+              class="form-control"
+              id="massInput"
+              type="number"
+              placeholder="Contoh: 2"
+            />
+          </div>
+
+          <div class="col-md-6 col-xl-3">
+            <label class="form-label" for="specificHeatInput">
+              Kalor Jenis
+            </label>
+
+            <input
+              class="form-control"
+              id="specificHeatInput"
+              type="number"
+              placeholder="J/kg°C"
+            />
+          </div>
+
+          <div class="col-md-6 col-xl-3">
+            <label class="form-label" for="deltaTemperatureInput">
+              ΔT (°C)
+            </label>
+
+            <input
+              class="form-control"
+              id="deltaTemperatureInput"
+              type="number"
+              placeholder="Contoh: 30"
+            />
+          </div>
+
+          <div class="col-md-6 col-xl-3">
+            <label class="form-label" for="materialPreset">
+              Bahan
+            </label>
+
+            <select class="form-select" id="materialPreset">
+              <option value="">Pilih bahan</option>
+              <option value="4200">Air (4200 J/kg°C)</option>
+              <option value="900">Aluminium (900 J/kg°C)</option>
+              <option value="385">Tembaga (385 J/kg°C)</option>
+              <option value="450">Besi (450 J/kg°C)</option>
+              <option value="2100">Es (2100 J/kg°C)</option>
+              <option value="130">Emas (130 J/kg°C)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="mt-3">
+          <button class="btn btn-primary rounded-pill px-4" onclick="hitungKalor()">
+            <i class="bi bi-calculator-fill me-1"></i>
+            Hitung Kalor
+          </button>
+
+          <p id="heatResult" class="mt-3 fw-bold"></p>
+        </div>
+      </section>
+
+      <!--ASAS BLACK-->
+
+      <section id="black" class="section-card">
+        <div class="section-head">
+          <span class="section-label">Fitur Asas Black</span>
+
+          <h2>Kalkulator Asas Black</h2>
+
+          <p>
+            Hitung suhu akhir campuran dua benda dengan konsep kalor lepas sama
+            dengan kalor terima.
+          </p>
+        </div>
+
+        <div class="info-box mb-4">
+          <strong>Rumus:</strong>
+
+          <span>
+            m₁ × c₁ × (T₁ - Tc) = m₂ × c₂ × (Tc - T₂)
+          </span>
+        </div>
+
+        <div class="row g-3">
+          <div class="col-md-6 col-xl-4">
+            <label class="form-label" for="blackMassHot">
+              Massa Benda Panas (kg)
+            </label>
+
+            <input
+              class="form-control"
+              id="blackMassHot"
+              type="number"
+              placeholder="Contoh: 2"
+            />
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <label class="form-label" for="blackHeatHot">
+              Kalor Jenis Benda Panas
+            </label>
+
+            <input
+              class="form-control"
+              id="blackHeatHot"
+              type="number"
+              placeholder="Contoh: 4200"
+            />
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <label class="form-label" for="blackTempHot">
+              Suhu Awal Benda Panas (°C)
+            </label>
+
+            <input
+              class="form-control"
+              id="blackTempHot"
+              type="number"
+              placeholder="Contoh: 80"
+            />
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <label class="form-label" for="blackMassCold">
+              Massa Benda Dingin (kg)
+            </label>
+
+            <input
+              class="form-control"
+              id="blackMassCold"
+              type="number"
+              placeholder="Contoh: 1"
+            />
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <label class="form-label" for="blackHeatCold">
+              Kalor Jenis Benda Dingin
+            </label>
+
+            <input
+              class="form-control"
+              id="blackHeatCold"
+              type="number"
+              placeholder="Contoh: 4200"
+            />
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <label class="form-label" for="blackTempCold">
+              Suhu Awal Benda Dingin (°C)
+            </label>
+
+            <input
+              class="form-control"
+              id="blackTempCold"
+              type="number"
+              placeholder="Contoh: 25"
+            />
+          </div>
+        </div>
+
+        <div class="mt-4 d-flex flex-wrap gap-2">
+          <button
+            class="btn btn-primary rounded-pill px-4"
+            type="button"
+            onclick="hitungAsasBlack()"
+          >
+            <i class="bi bi-calculator-fill me-1"></i>
+            Hitung Suhu Campuran
+          </button>
+
+          <button
+            class="btn btn-outline-secondary rounded-pill px-4"
+            type="button"
+            onclick="resetAsasBlack()"
+          >
+            Reset
+          </button>
+        </div>
+
+        <div class="result-card mt-4">
+          <span>Hasil Suhu Campuran</span>
+          <strong id="blackResult">-</strong>
+
+          <p id="blackExplanation" class="mb-0">
+            Masukkan data lalu klik tombol hitung.
+          </p>
+        </div>
+      </section>
+
+      <!--KUIS + GAME-->
+
+      <section id="quiz" class="section-card">
+        <div class="section-head">
+          <span class="section-label">Fitur Evaluasi</span>
+
+          <h2>Kuis Interaktif Sistem Monitoring Aquarium</h2>
+
+          <p>
+            Jawab pertanyaan singkat untuk menguji pemahaman tentang sensor,
+            aktuator, dan logika monitoring aquarium.
+          </p>
+        </div>
+
+        <div class="quiz-box">
+          <div class="quiz-top">
+            <strong id="quizProgressText">Soal 1 dari 5</strong>
+            <strong id="quizScoreText">Skor: 0</strong>
+          </div>
+
+          <div class="progress mb-4">
+            <div
+              id="quizProgressBar"
+              class="progress-bar"
+            ></div>
+          </div>
+
+          <h3 id="quizQuestion">Memuat soal...</h3>
+
+          <div id="quizOptions" class="row g-3 my-3"></div>
+
+          <p id="quizFeedback" class="text-secondary">
+            Pilih salah satu jawaban yang menurutmu benar.
+          </p>
+
+          <div class="quiz-actions">
+            <button
+              id="nextQuestionBtn"
+              class="btn btn-primary rounded-pill"
+              type="button"
+            >
+              Soal Berikutnya
+            </button>
+
+            <button
+              id="restartQuizBtn"
+              class="btn btn-outline-secondary rounded-pill"
+              type="button"
+            >
+              Ulangi Kuis
+            </button>
+          </div>
+        </div>
+
+        <div class="component-game mt-4">
+          <div class="component-game-head">
+            <div>
+              <span class="game-label">Mini Game</span>
+
+              <h4>Tebak Komponen Sistem Aquarium</h4>
+
+              <p>
+                Pilih komponen yang sesuai dengan fungsi yang ditampilkan.
+              </p>
+            </div>
+
+            <div class="game-score-box">
+              <span>Skor Game</span>
+              <strong id="componentGameScore">0</strong>
+            </div>
+          </div>
+
+          <div class="game-question-card">
+            <span id="componentGameRound">Soal Game 1</span>
+
+            <h5 id="componentGameQuestion">
+              Klik mulai untuk menampilkan soal permainan.
+            </h5>
+          </div>
+
+          <div id="componentGameOptions" class="component-game-options"></div>
+
+          <p id="componentGameFeedback" class="component-game-feedback">
+            Tekan tombol mulai untuk bermain.
+          </p>
+
+          <div class="component-game-actions">
+            <button
+              type="button"
+              class="btn btn-primary rounded-pill"
+              onclick="mulaiGameKomponen()"
+            >
+              <i class="bi bi-play-fill me-1"></i>
+              Mulai Game
+            </button>
+
+            <button
+              type="button"
+              class="btn btn-outline-secondary rounded-pill"
+              onclick="resetGameKomponen()"
+            >
+              Reset Game
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!--PESAN-->
+      
+      <section id="pesan" class="section-card">
+        <div class="section-head">
+          <span class="section-label">Masukan Pengunjung</span>
+
+          <h2>Form Masukan dan Pesan</h2>
+
+          <p>
+            Pengunjung dapat menuliskan pesan, saran, atau tanggapan terhadap
+            media pembelajaran ini melalui form berikut.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-5">
+            <div class="panel">
+              <h3>Tulis Pesan</h3>
+
+              <form id="messageForm" action="/api/halaman-proses-data" method="POST">
+                <label class="form-label" for="senderName">
+                  Nama Pengirim
+                </label>
+
+                <input
+                  class="form-control mb-3"
+                  id="senderName"
+                  name="sender_name"
+                  type="text"
+                  placeholder="Masukkan nama"
+                  required
+                />
+
+                <label class="form-label" for="senderEmail">
+                  Email
+                </label>
+
+                <input
+                  class="form-control mb-3"
+                  id="senderEmail"
+                  name="user_email"
+                  type="email"
+                  placeholder="nama@gmail.com"
+                  required
+                />
+
+                <label class="form-label" for="messageSubject">
+                  Subjek
+                </label>
+
+                <input
+                  class="form-control mb-3"
+                  id="messageSubject"
+                  name="message_subject"
+                  type="text"
+                  placeholder="Tulis subjek"
+                  required
+                />
+
+                <label class="form-label" for="messageBody">
+                  Isi Pesan
+                </label>
+
+                <textarea
+                  class="form-control mb-3"
+                  id="messageBody"
+                  name="message_body"
+                  rows="5"
+                  placeholder="Tulis pesan"
+                  required
+                ></textarea>
+
+                <button
+                  class="btn btn-primary rounded-pill"
+                  id="saveMessageBtn"
+                  type="submit"
+                >
+                  <i class="bi bi-send-fill me-1"></i>
+                  Simpan Pesan
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="panel">
+              <div class="d-flex align-items-center justify-content-between gap-2 mb-2">
+                <h3 class="mb-0">Kotak Masuk Lokal</h3>
+
+                <button
+                  class="btn btn-sm btn-outline-danger rounded-pill"
+                  type="button"
+                  onclick="hapusSemuaPesan()"
+                >
+                  Hapus Semua
+                </button>
+              </div>
+
+              <p class="text-secondary mb-0">
+                Pesan yang disimpan akan muncul di sini sebagai data masukan
+                sementara pada browser.
+              </p>
+
+              <div id="inboxList" class="mt-3"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer-card">
+        <strong>Monitoring Aquarium Ikan di Daerah Tropis</strong>
+
+        <p>
+          Media pembelajaran interaktif berbasis simulasi IoT untuk memahami
+          pemantauan suhu, kelembapan, tinggi air, kekeruhan, serta konsep suhu
+          dan kalor secara lebih modern dan menyenangkan.
+        </p>
+
+        <small>Dikembangkan oleh Aldy Iqbal Syafruddin</small>
+      </footer>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
